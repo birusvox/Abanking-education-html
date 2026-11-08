@@ -1,16 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABanking Education</title>
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
-
 <body>
-    
-</body>
+    <header class="header">
+        <a href="#" class="logo">ABanking</a>
+        <nav class="nav">
+            <a href="#about">О нас</a>
+            <a href="#program">Программа</a>
+            <a href="#pricing">Стоимость</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+    </header>
 
+    <section class="hero">
+        <div>
+            <h1>Курс по банковскому образованию</h1>
+            <p>Создайте современные образовательные платформы для банков</p>
+            <a href="#pricing" class="btn">Записаться</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>О курсе</h2>
+        <p>Разработано в партнёрстве с ведущими банками. Веб-разработка, управление платформами.</p>
+        
+        <div class="features">
+            <div class="card">
+                <h3>Практика</h3>
+                <p>Реальные проекты от банков</p>
+            </div>
+            <div class="card">
+                <h3>Менторы</h3>
+                <p>Эксперты из банковской сферы</p>
+            </div>
+            <div class="card">
+                <h3>Карьера</h3>
+                <p>Помощь в трудоустройстве</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="program" class="program">
+        <h2>Программа</h2>
+        <div class="modules">
+            <div class="card">
+                <h3>Модуль 1: HTML/CSS</h3>
+                <p>Основы верстки и стилей</p>
+            </div>
+            <div class="card">
+                <h3>Модуль 2: JavaScript</h3>
+                <p>Интерактивные элементы</p>
+            </div>
+            <div class="card">
+                <h3>Модуль 3: Веб-разработка</h3>
+                <p>Полноценные приложения</p>
+            </div>
+            <div class="card">
+                <h3>Модуль 4: Банки</h3>
+                <p>Разработка для банковского сектора</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <h2>Стоимость</h2>
+        <div class="pricing-grid">
+            <div class="plan">
+                <h3>Базовый</h3>
+                <p class="price">15 000 ₽</p>
+                <ul class="features-list">
+                    <li>Доступ к материалам</li>
+                    <li>Поддержка менторов</li>
+                    <li>Сертификат</li>
+                </ul>
+            </div>
+            <div class="plan">
+                <h3>Профи</h3>
+                <p class="price">25 000 ₽</p>
+                <ul class="features-list">
+                    <li>Всё из базового</li>
+                    <li>Личный ментор</li>
+                    <li>Карьерное сопровождение</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacts" class="footer">
+        <p>&copy; 2024 ABanking Education</p>
+        <a href="mailto:info@abanking.ru">info@abanking.ru</a>
+        <a href="tel:+7(800)123-45-67">+7 (800) 123-45-67</a>
+    </footer>
+
+    <script src="./scripts/main.js"></script>
+</body>
 </html>
