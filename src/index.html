@@ -1,102 +1,290 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABanking Education</title>
-    <link rel="stylesheet" href="./styles/main.css">
+    <title>antools — Awesome tools for Designer & Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">ABanking</a>
-        <nav class="nav">
-            <a href="#about">О нас</a>
-            <a href="#program">Программа</a>
-            <a href="#pricing">Стоимость</a>
-            <a href="#contacts">Контакты</a>
-        </nav>
-    </header>
+    <div class="page">
+        <header class="header">
+            <a class="header__logo" href="#top">
+                <span class="header__mark" aria-hidden="true">A</span>
+                <span class="header__brand">antools.</span>
+            </a>
 
-    <section class="hero">
-        <div>
-            <h1>Курс по банковскому образованию</h1>
-            <p>Создайте современные образовательные платформы для банков</p>
-            <a href="#pricing" class="btn">Записаться</a>
-        </div>
-    </section>
+            <nav class="header__nav" aria-label="Main">
+                <a class="header__link header__link_current" href="#top">Home</a>
+                <div class="header__drop">
+                    <button class="header__link header__toggle" type="button" aria-expanded="false" aria-controls="categories">
+                        Categories
+                        <span class="header__caret" aria-hidden="true"></span>
+                    </button>
+                    <ul class="header__menu" id="categories">
+                        <li><a class="header__option" href="#tools" data-filter="design">Design</a></li>
+                        <li><a class="header__option" href="#tools" data-filter="dev">Development</a></li>
+                        <li><a class="header__option" href="#tools" data-filter="free">Free</a></li>
+                        <li><a class="header__option" href="#tools" data-filter="paid">Paid</a></li>
+                    </ul>
+                </div>
+                <a class="header__link" href="#tools">My Collections</a>
+                <a class="header__link" href="#brands">Blog</a>
+            </nav>
 
-    <section id="about" class="about">
-        <h2>О курсе</h2>
-        <p>Разработано в партнёрстве с ведущими банками. Веб-разработка, управление платформами.</p>
-        
-        <div class="features">
-            <div class="card">
-                <h3>Практика</h3>
-                <p>Реальные проекты от банков</p>
+            <div class="header__actions">
+                <button class="header__login" type="button" data-auth="login">Login</button>
+                <button class="button button_theme_primary" type="button" data-auth="signup">Sign Up</button>
             </div>
-            <div class="card">
-                <h3>Менторы</h3>
-                <p>Эксперты из банковской сферы</p>
-            </div>
-            <div class="card">
-                <h3>Карьера</h3>
-                <p>Помощь в трудоустройстве</p>
-            </div>
-        </div>
-    </section>
+        </header>
 
-    <section id="program" class="program">
-        <h2>Программа</h2>
-        <div class="modules">
-            <div class="card">
-                <h3>Модуль 1: HTML/CSS</h3>
-                <p>Основы верстки и стилей</p>
-            </div>
-            <div class="card">
-                <h3>Модуль 2: JavaScript</h3>
-                <p>Интерактивные элементы</p>
-            </div>
-            <div class="card">
-                <h3>Модуль 3: Веб-разработка</h3>
-                <p>Полноценные приложения</p>
-            </div>
-            <div class="card">
-                <h3>Модуль 4: Банки</h3>
-                <p>Разработка для банковского сектора</p>
-            </div>
-        </div>
-    </section>
+        <main id="top">
+            <section class="hero">
+                <div class="hero__content">
+                    <h1 class="hero__title">Awesome tools for<br>Designer &amp; Developer<span class="hero__dot">.</span></h1>
+                    <p class="hero__text">Antool is a web collection of information on paid or free Design and Development tools</p>
 
-    <section id="pricing" class="pricing">
-        <h2>Стоимость</h2>
-        <div class="pricing-grid">
-            <div class="plan">
-                <h3>Базовый</h3>
-                <p class="price">15 000 ₽</p>
-                <ul class="features-list">
-                    <li>Доступ к материалам</li>
-                    <li>Поддержка менторов</li>
-                    <li>Сертификат</li>
+                    <form class="search" role="search">
+                        <label class="search__label" for="tool-search">Search tools</label>
+                        <span class="search__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </span>
+                        <input class="search__input" id="tool-search" type="search" placeholder="find more than 430+ tools..." autocomplete="off">
+                        <button class="button button_theme_primary search__submit" type="submit">Search</button>
+                    </form>
+
+                    <ul class="social">
+                        <li><a class="social__link" href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h2.6l.4-3H13v-2c0-.6.4-1 1-1z"/></svg>
+                        </a></li>
+                        <li><a class="social__link" href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" width="16" height="16"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg>
+                        </a></li>
+                        <li><a class="social__link" href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M20 7.4c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.7-2.1.8A3.2 3.2 0 0 0 12 9.3c0 .3 0 .5.1.7-2.7-.1-5.1-1.4-6.7-3.4-.3.5-.4 1-.4 1.6 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4 0 1.6 1.1 2.9 2.6 3.2-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.2 3.1 2.3A6.5 6.5 0 0 1 4 17.6 9.1 9.1 0 0 0 9 19c6 0 9.3-5 9.3-9.3v-.4c.6-.5 1.2-1.1 1.7-1.8z"/></svg>
+                        </a></li>
+                    </ul>
+                </div>
+
+                <div class="hero__art" aria-hidden="true">
+                    <img class="hero__image" src="./assets/hero.svg" alt="">
+                </div>
+            </section>
+
+            <section class="tools" id="tools">
+                <h2 class="tools__title">Most Popular Tools</h2>
+                <p class="tools__text">Tools for the best Designers and Developers<br>most popularly used in the world</p>
+
+                <p class="tools__empty" hidden>Nothing matched your search. Try another name.</p>
+
+                <ul class="tools__list">
+                    <li class="tool" data-name="figma" data-tags="design free">
+                        <div class="tool__head">
+                            <span class="tool__logo tool__logo_figma" aria-hidden="true"></span>
+                            <div>
+                                <h3 class="tool__name">FIGMA</h3>
+                                <p class="tool__plan">Free</p>
+                            </div>
+                        </div>
+                        <p class="tool__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="tool__bar">
+                            <div class="tool__actions">
+                                <button class="tool__icon" type="button" aria-label="Like Figma" data-like><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 20s-7-4.4-7-9a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 4.6-7 9-7 9z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+                                <button class="tool__icon" type="button" aria-label="Save Figma" data-save><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 4h10a1 1 0 0 1 1 1v15l-6-3-6 3V5a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+                            </div>
+                            <a class="tool__visit" href="https://www.figma.com" target="_blank" rel="noopener noreferrer">Visit</a>
+                        </div>
+                    </li>
+
+                    <li class="tool tool_featured" data-name="sketch" data-tags="design paid">
+                        <div class="tool__head">
+                            <span class="tool__logo tool__logo_sketch" aria-hidden="true"></span>
+                            <div>
+                                <h3 class="tool__name">Sketch</h3>
+                                <p class="tool__plan tool__plan_paid">Trial &amp; Paid</p>
+                            </div>
+                        </div>
+                        <p class="tool__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="tool__people" aria-hidden="true">
+                            <span class="tool__avatar">A</span>
+                            <span class="tool__avatar tool__avatar_photo"></span>
+                            <span class="tool__count">2</span>
+                        </div>
+                        <div class="tool__bar">
+                            <div class="tool__actions">
+                                <button class="tool__icon tool__icon_active" type="button" aria-label="Like Sketch" data-like><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 20s-7-4.4-7-9a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 4.6-7 9-7 9z" fill="currentColor" stroke="currentColor" stroke-width="1.6"/></svg></button>
+                                <button class="tool__icon" type="button" aria-label="Save Sketch" data-save><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 4h10a1 1 0 0 1 1 1v15l-6-3-6 3V5a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+                            </div>
+                            <a class="button button_theme_primary button_size_small" href="https://www.sketch.com" target="_blank" rel="noopener noreferrer">Visit</a>
+                        </div>
+                    </li>
+
+                    <li class="tool" data-name="visual studio code" data-tags="dev free">
+                        <div class="tool__head">
+                            <span class="tool__logo tool__logo_code" aria-hidden="true"></span>
+                            <div>
+                                <h3 class="tool__name">Visual Studio Code</h3>
+                                <p class="tool__plan">Free</p>
+                            </div>
+                        </div>
+                        <p class="tool__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="tool__bar">
+                            <div class="tool__actions">
+                                <button class="tool__icon" type="button" aria-label="Like Visual Studio Code" data-like><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 20s-7-4.4-7-9a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 4.6-7 9-7 9z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+                                <button class="tool__icon" type="button" aria-label="Save Visual Studio Code" data-save><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 4h10a1 1 0 0 1 1 1v15l-6-3-6 3V5a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+                            </div>
+                            <a class="tool__visit" href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer">Visit</a>
+                        </div>
+                    </li>
+
+                    <li class="tool" data-name="notion" data-tags="design dev paid">
+                        <div class="tool__head">
+                            <span class="tool__logo tool__logo_notion" aria-hidden="true">N</span>
+                            <div>
+                                <h3 class="tool__name">Notion</h3>
+                                <p class="tool__plan tool__plan_paid">Free &amp; Paid</p>
+                            </div>
+                        </div>
+                        <p class="tool__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="tool__bar">
+                            <div class="tool__actions">
+                                <button class="tool__icon" type="button" aria-label="Like Notion" data-like><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 20s-7-4.4-7-9a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 4.6-7 9-7 9z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+                                <button class="tool__icon" type="button" aria-label="Save Notion" data-save><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 4h10a1 1 0 0 1 1 1v15l-6-3-6 3V5a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+                            </div>
+                            <a class="tool__visit" href="https://www.notion.so" target="_blank" rel="noopener noreferrer">Visit</a>
+                        </div>
+                    </li>
+
+                    <li class="tool" data-name="slack" data-tags="dev paid">
+                        <div class="tool__head">
+                            <span class="tool__logo tool__logo_slack" aria-hidden="true"></span>
+                            <div>
+                                <h3 class="tool__name">Slack</h3>
+                                <p class="tool__plan tool__plan_paid">Free &amp; Paid</p>
+                            </div>
+                        </div>
+                        <p class="tool__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="tool__bar">
+                            <div class="tool__actions">
+                                <button class="tool__icon" type="button" aria-label="Like Slack" data-like><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 20s-7-4.4-7-9a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 4.6-7 9-7 9z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+                                <button class="tool__icon" type="button" aria-label="Save Slack" data-save><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 4h10a1 1 0 0 1 1 1v15l-6-3-6 3V5a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+                            </div>
+                            <a class="tool__visit" href="https://slack.com" target="_blank" rel="noopener noreferrer">Visit</a>
+                        </div>
+                    </li>
+
+                    <li class="tool" data-name="invision" data-tags="design paid">
+                        <div class="tool__head">
+                            <span class="tool__logo tool__logo_invision" aria-hidden="true">in</span>
+                            <div>
+                                <h3 class="tool__name">Invision</h3>
+                                <p class="tool__plan tool__plan_paid">Free &amp; Paid</p>
+                            </div>
+                        </div>
+                        <p class="tool__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="tool__bar">
+                            <div class="tool__actions">
+                                <button class="tool__icon" type="button" aria-label="Like Invision" data-like><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 20s-7-4.4-7-9a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 4.6-7 9-7 9z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+                                <button class="tool__icon" type="button" aria-label="Save Invision" data-save><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 4h10a1 1 0 0 1 1 1v15l-6-3-6 3V5a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+                            </div>
+                            <a class="tool__visit" href="https://www.invisionapp.com" target="_blank" rel="noopener noreferrer">Visit</a>
+                        </div>
+                    </li>
+
+                    <li class="tool tool_extra" data-name="zeplin" data-tags="design paid" hidden>
+                        <div class="tool__head">
+                            <span class="tool__logo tool__logo_zeplin" aria-hidden="true">Z</span>
+                            <div>
+                                <h3 class="tool__name">Zeplin</h3>
+                                <p class="tool__plan tool__plan_paid">Free &amp; Paid</p>
+                            </div>
+                        </div>
+                        <p class="tool__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="tool__bar">
+                            <div class="tool__actions">
+                                <button class="tool__icon" type="button" aria-label="Like Zeplin" data-like><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 20s-7-4.4-7-9a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 4.6-7 9-7 9z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+                                <button class="tool__icon" type="button" aria-label="Save Zeplin" data-save><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 4h10a1 1 0 0 1 1 1v15l-6-3-6 3V5a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+                            </div>
+                            <a class="tool__visit" href="https://zeplin.io" target="_blank" rel="noopener noreferrer">Visit</a>
+                        </div>
+                    </li>
+
+                    <li class="tool tool_extra" data-name="adobe xd" data-tags="design paid" hidden>
+                        <div class="tool__head">
+                            <span class="tool__logo tool__logo_xd" aria-hidden="true">Xd</span>
+                            <div>
+                                <h3 class="tool__name">Adobe XD</h3>
+                                <p class="tool__plan tool__plan_paid">Paid</p>
+                            </div>
+                        </div>
+                        <p class="tool__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="tool__bar">
+                            <div class="tool__actions">
+                                <button class="tool__icon" type="button" aria-label="Like Adobe XD" data-like><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 20s-7-4.4-7-9a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 4.6-7 9-7 9z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+                                <button class="tool__icon" type="button" aria-label="Save Adobe XD" data-save><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 4h10a1 1 0 0 1 1 1v15l-6-3-6 3V5a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+                            </div>
+                            <a class="tool__visit" href="https://www.adobe.com/products/xd.html" target="_blank" rel="noopener noreferrer">Visit</a>
+                        </div>
+                    </li>
+
+                    <li class="tool tool_extra" data-name="photoshop" data-tags="design paid" hidden>
+                        <div class="tool__head">
+                            <span class="tool__logo tool__logo_ps" aria-hidden="true">Ps</span>
+                            <div>
+                                <h3 class="tool__name">Photoshop</h3>
+                                <p class="tool__plan tool__plan_paid">Paid</p>
+                            </div>
+                        </div>
+                        <p class="tool__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="tool__bar">
+                            <div class="tool__actions">
+                                <button class="tool__icon" type="button" aria-label="Like Photoshop" data-like><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 20s-7-4.4-7-9a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 4.6-7 9-7 9z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+                                <button class="tool__icon" type="button" aria-label="Save Photoshop" data-save><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 4h10a1 1 0 0 1 1 1v15l-6-3-6 3V5a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+                            </div>
+                            <a class="tool__visit" href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noopener noreferrer">Visit</a>
+                        </div>
+                    </li>
                 </ul>
-            </div>
-            <div class="plan">
-                <h3>Профи</h3>
-                <p class="price">25 000 ₽</p>
-                <ul class="features-list">
-                    <li>Всё из базового</li>
-                    <li>Личный ментор</li>
-                    <li>Карьерное сопровождение</li>
-                </ul>
-            </div>
-        </div>
-    </section>
 
-    <footer id="contacts" class="footer">
-        <p>&copy; 2024 ABanking Education</p>
-        <a href="mailto:info@abanking.ru">info@abanking.ru</a>
-        <a href="tel:+7(800)123-45-67">+7 (800) 123-45-67</a>
-    </footer>
+                <button class="button button_theme_ghost tools__more" type="button">Load more</button>
+            </section>
+        </main>
 
-    <script src="./scripts/main.js"></script>
+        <footer class="footer" id="brands">
+            <p class="footer__note">Trusted more than 150+ brand</p>
+            <ul class="footer__brands">
+                <li class="footer__brand">
+                    <svg viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><rect x="1" y="1" width="9" height="9" fill="#9aa3ad"/><rect x="12" y="1" width="9" height="9" fill="#9aa3ad"/><rect x="1" y="12" width="9" height="9" fill="#9aa3ad"/><rect x="12" y="12" width="9" height="9" fill="#9aa3ad"/></svg>
+                    Microsoft
+                </li>
+                <li class="footer__brand">Google</li>
+                <li class="footer__brand">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="#9aa3ad" d="M6 14a2 2 0 1 1 0-4h2v4H6zm4 2a2 2 0 1 1-4 0v-2h4v2zm4-2a2 2 0 1 1 0 4h-2v-4h2zm-2-4a2 2 0 1 1 4 0v2h-4V10z"/></svg>
+                    slack
+                </li>
+                <li class="footer__brand">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="#9aa3ad" stroke-width="2"/><path fill="#9aa3ad" d="M8 8h3.2c2 0 3.3 1 3.3 2.6 0 1.2-.7 2-1.7 2.3 1.2.3 2 1.2 2 2.5 0 1.8-1.4 3-3.6 3H8V8zm2 2.1v2.3h1.2c.8 0 1.3-.4 1.3-1.15S12 10.1 11.2 10.1H10zm0 4.1V16h1.5c.9 0 1.5-.4 1.5-1.2s-.6-1.2-1.5-1.2H10z"/></svg>
+                    WordPress
+                </li>
+            </ul>
+        </footer>
+    </div>
+
+    <dialog class="auth" id="auth">
+        <form class="auth__form" method="dialog">
+            <h2 class="auth__title" id="auth-title">Sign Up</h2>
+            <label class="auth__label" for="auth-email">Email</label>
+            <input class="auth__input" id="auth-email" type="email" required placeholder="you@email.com">
+            <label class="auth__label" for="auth-password">Password</label>
+            <input class="auth__input" id="auth-password" type="password" required minlength="6" placeholder="At least 6 characters">
+            <div class="auth__actions">
+                <button class="button button_theme_ghost" type="button" data-auth-close>Cancel</button>
+                <button class="button button_theme_primary" type="submit">Continue</button>
+            </div>
+            <p class="auth__status" role="status"></p>
+        </form>
+    </dialog>
 </body>
 </html>
